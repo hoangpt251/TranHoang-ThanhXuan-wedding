@@ -1,0 +1,356 @@
+/* Ghi chú:
+  - CSS mặc định (không trong @media) áp dụng cho laptop/desktop lớn
+  - Các khối @media max-width dùng để chỉnh lại cho màn nhỏ hơn
+  - Các kích thước được setup trong responsive:
+    + max-width > 1400px: Cho các màn hình laptop cỡ lớn (loại lớn hơn 15.6in), desktop
+    + max-width <= 1400px: Cho các màn hình laptop cỡ vừa (loại 13, 14inch)
+    + max-width <= 1200px: Cho các màn hình laptop loại nhỏ
+    + max-width <= 992px: Cho các loại tablet xoay ngang, hoặc laptop nhỏ hơn
+    + max-width <= 768px: Cho các loại tablet dọc
+    + max-width <= 576px: Cho các loại phone cỡ lớn
+    + max-width <= 375px: Cho các loại phone cỡ nhỏ
+*/
+
+/*Các màn có kích thước lớn hơn 1400px*/
+.wedding-names .mobile-display { display: none; }
+.invite-time .mobile-display { display: none; }
+.p-event .mobile-display { display: none; }
+.album-slide .swiper-slide { width: 25%; }
+
+/* <= 1399.98px : Desktop vừa */
+@media (max-width: 1400px) {
+  h1 {
+    font-size: 7rem;
+    transform: translateY(-20px);
+  }
+  h4 {transform: translateY(-15px);}
+  .wedding-banner-img {margin-top: 15px;}
+  .simply-countdown > .simply-section {
+      width: 45px;
+      height: 45px;
+      padding: 50px;
+      margin: 5px;
+      transform: translateY(-5px);
+  }
+  .btn-hero { margin-top: 10px; }
+  .album-slide .swiper-slide { width: 30%; }
+}
+
+/* <= 1199.98px : Laptop lớn */
+@media (max-width: 1200px) {
+  /* chỉnh style cho màn hình <= 1199px */
+    h1 {font-size: 6rem;}
+    .wedding-banner-img {margin-top: -30px;}
+    .btn-hero { margin-top: 3.5rem; }
+}
+
+/* <= 991.98px : Laptop nhỏ / Tablet xoay ngang */
+@media (max-width: 992px) {
+    h1 {font-size: 5rem;}
+
+    .timeline::before { left: 60px; }
+    .timeline li .timeline-image {
+        left: 15px;
+        margin-left: 45px;
+        top: 16px;
+    }
+    .timeline li .timeline-panel {
+        width: calc((100% - 200px));
+        float: right;
+        /* background-color: rgba(232, 255, 247, 0.75); */
+    }
+    .timeline li .timeline-panel::before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    .timeline li .timeline-panel::after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -13px;
+        right: auto;        
+    }
+}
+
+/* <= 767.98px : Tablet dọc */
+@media (max-width: 768px) {
+    h1 {font-size: 6rem;}
+    p {font-size: 1rem;}
+    .wedding-names .laptop-display { display: none; }
+    .wedding-names .mobile-display { display: inline; }
+
+    .hero::before { background-position: 85% center; }
+
+    /*Wedding Card*/
+    .cards-container { display: block; }
+    .desktop-only { display: none; }
+    .mobile-only {
+        display: flex;
+        width: 400px;   /* giữ cố định 400px */
+        margin: 0 auto 10px;
+    }
+    .home { background-image: url(../../assets/picture/background/hoang-xuan-5.JPG); }
+    .home::before {background: rgba(255, 255, 255, 0.8);}
+
+    /* ============ Home page =======================================*/
+    .home {
+        padding-top: 12rem;
+        padding-bottom: 3rem; 
+    }
+    .invite-time .laptop-display { display: none; }
+    .invite-time .mobile-display { 
+        font-family: 'HILLDA', sans-serif;
+        display: inline;
+        font-size: 21px; 
+    }
+    .p-event .laptop-display { display: none; }
+    .p-event .mobile-display { 
+        display: inline;
+        font-size: 18px; 
+    }
+    .home h3 { font-size: 30px; }
+    .home .couple { 
+        margin-top: 45px; 
+        justify-content: space-between;
+        gap: 40px;
+    }
+    .home .couple h3 { font-size: 2rem; }
+    .home .couple h3 .title-name {
+        margin-top: 20px; /* trước là 50px */
+        font-size: 2.7rem;
+    }
+    .home .heart {
+        transform: translateX(-50%) translateY(180px); /* dịch lên cao hơn */
+        z-index: 2; /* để nổi trên */
+        border-radius: 0;
+        background: none;
+        box-shadow: none;
+        width: 100px;
+        height: 100px;
+        overflow: visible;
+    }
+    .heart-inner {
+        width: 100%; /*Chỉnh kích thước ảnh*/
+        height: auto;
+        position: relative;
+        transform: translateY(-15px);
+    }
+    .home .address { font-size: 1.1rem; }
+    /*==================================================*/
+
+    .wedding-page { background-position: 63% center; }
+    .card-wrapper {
+        display: none;
+        width: 400px;   /* giữ cố định 400px */
+        margin: 0 auto;
+    }
+    .card-wrapper.active { display: block; }
+    /* GIỮ NGUYÊN cấu trúc 2 cột Nhà Trai / Nhà Gái */
+    .family-info {
+        flex-direction: row;  /* ép về hàng ngang */
+        gap: 40px;
+    }
+
+    .story {padding-top: 3rem;}
+    .timeline li .timeline-image {
+        width: 140px;
+        height: 140px;
+    }
+    .album-slide .swiper-slide { width: 55%; }
+
+    .video-wrapper { margin-top: 100px; } 
+
+    #giftModal .modal-dialog { margin: 1rem; } 
+}
+
+/* <= 575.98px : Mobile */
+@media (max-width: 576px) {
+    /*Main page & Home page*/
+    h1 {font-size: 5.5rem;}
+    h2 {font-size: 2.7rem;}
+    p {font-size: 0.8rem;}
+
+    /*Phần countdown*/
+    .simply-countdown > .simply-section {
+        width: 25px;
+        height: 25px;
+        padding: 40px;
+        margin: 5px;
+    }
+    .hero::before {
+        background-position: 85% center;
+    }
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 2.0rem;
+    }
+    .wedding-banner-img {
+        width: 55%; /* hoặc giá trị bạn thấy phù hợp như 300px */
+        margin-top: -30px;
+        margin-bottom: 20px;
+    }
+    .hero h4 {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 1.6rem;
+    }
+    /*Menu bar*/
+    .mynavbar .offcanvas-title { font-size: 30px; }
+    .mynavbar .offcanvas {
+        width: 200px;
+        right: 0 !important;  /*Ép sang bên phải*/
+        left: auto !important; /*Bỏ override mặc định về bên trái*/
+    }
+    .mynavbar .offcanvas-body .navbar-nav { text-align: right; }
+    .mynavbar .nav-link {
+        display: block;
+        text-align: right;
+    }
+    .btn-hero { margin-top: 3.5rem; }
+    /*Home page*/
+    .invite-time .mobile-display { font-size: 18px; }
+    .p-event .mobile-display { font-size: 15px; }
+    .home .couple { gap: 100px; }
+    .home .couple h3 { font-size: 1.7rem; }
+    .home .couple h3 .title-name { font-size: 2.3rem; }
+    .home .address { font-size: 0.8rem; }
+    .home .heart {
+        transform: translateX(-50%) translateY(150px); /* dịch lên cao hơn */
+        width: 90px;
+        height: 90px;
+    }
+    .heart-inner { transform: translateY(-10px); }
+
+    .story h3 {font-size: 1.5rem; }
+    .story span {font-size: 0.75rem; }
+    .story .parag {font-size: 0.9rem;}
+    .timeline li .timeline-image {
+        width: 80px;
+        height: 80px;
+    }
+    .timeline li .timeline-panel {
+        width: 65%;
+        transform: translateX(-20px);
+        padding: 1.5rem;
+        /* background-color: rgba(232, 255, 247, 0.65); */
+    }
+    .timeline li .timeline-panel::before { top: 30px; }
+    .timeline li .timeline-panel::after { top: 31px; }
+    
+    .album-slide .swiper-slide { width: 70%; }
+
+    .video-wrapper { margin-top: 150px; }
+
+    footer .title { font-size: 0.8rem; }
+}
+
+/* <= 375px : Mobile rất nhỏ (tuỳ chọn thêm) */
+@media (max-width: 375px) {
+    h1 {font-size: 4.5rem;}
+    .wedding-banner-img {
+        width: 65%; /* hoặc giá trị bạn thấy phù hợp như 300px */
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+    .simply-countdown > .simply-section {
+        width: 20px;
+        height: 20px;
+        padding: 35px;
+        margin: 5px;
+    }
+    .simply-countdown > .simply-section .simply-amount {
+        font-size: 1.8rem;
+        margin-bottom: -5px;
+    }
+    .invite-time .mobile-display { font-size: 15px; }
+    .p-event .mobile-display { font-size: 13px; }
+    .home { padding-top: 10rem;}
+    .home .couple { gap: 80px; }
+    .home .couple h3 { font-size: 1.5rem; }
+    .home .couple h3 .title-name { font-size: 1.8rem; }
+    .home .address { font-size: 0.65rem; }
+    .home .heart {
+        transform: translateX(-50%) translateY(115px); /* dịch lên cao hơn */
+    }
+    /*Chỉnh lại phần wedding card*/
+
+    .wedding-card {
+        position: relative;
+        width: 350px;
+        height: 650px;
+    }
+    .card-wrapper {
+        display: none;
+        width: 350px;   /* giữ cố định 400px */
+        margin: 0 auto;
+    }
+    .card-wrapper.active { display: block; }
+    /* GIỮ NGUYÊN cấu trúc 2 cột Nhà Trai / Nhà Gái */
+    .family-info {
+        flex-direction: row;  /* ép về hàng ngang */
+        gap: 40px;
+    }
+    .card-selector {
+        font-size: 15px;
+        padding: 10px 15px;
+        flex: unset;
+    }
+    .wedding-card .invite-text { font-size: 13px; }
+    .names .couple-name { font-size: 25px; }
+    .heart img { width: 35px; }
+    .wedding-card .invite-location {font-size: 15px;}
+    .date-top {font-size: 14px;}
+    .date-center {font-size: 30px;}
+    .date-middle {min-height: 50px;}
+    .date-side {font-size: 13px;}
+    .date-side span {font-size: 16px;}
+    .lunar-text {font-size: 18px;}
+    .position-text,
+    .local-text {font-size: 17px;}
+    .location-text {font-size: 13px;}
+    .family-block h4 {
+        margin-top: 10px;
+        margin-bottom: -13px;
+        font-size: 14px
+    }
+    .family-block .parents{font-size: 13px; margin-bottom: -5px;}
+    .family-block .parents-name {font-size: 20px;}
+    .contact-info {
+        margin-top: 5px; 
+        padding-top: 5px;
+        font-size: 15px;
+    }
+    .contact-icon {font-size: 17px;}
+    .story {padding-top: 2rem;}
+    .story .row {
+        --bs-gutter-x: 0;
+    }
+    .timeline { padding: 0.5rem;}
+
+    .timeline li .timeline-panel { 
+        padding: 15px;
+        width: 67%;
+    }
+    .timeline::before { left: 40px; }
+    .timeline li .timeline-image { transform: translateX(-85%); }
+    .timeline li .timeline-panel::before { top: 42px; }
+    .timeline li .timeline-panel::after { top: 43px; }
+    .gallery, .video, .message-wish, .gifts { padding-top: 2rem; }
+    .message-box { max-width: 320px; }
+    .input-group {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    .form-title {font-size: 20px;}
+    .form-style {font-size: 15px;}
+    .button-group {gap: 15px; margin-top: 8px;}
+    .btn {
+        padding: 10px 15px;
+        margin-top: 8px;
+    }
+    .gift-message {
+        font-size: 0.8rem;
+        white-space: nowrap;
+    }
+    footer .title {font-size: 0.7rem;}
+}
