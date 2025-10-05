@@ -9,16 +9,16 @@
   <title>Hoàng 💖 Xuân</title>
   <link rel="icon" type="image/png" href="assets/picture/icon/hy.png">
   <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
-  <link rel="canonical" href="https://hoangpt251.github.io/my-wedding/"> <!--cần sửa lại theo đúng thực tế tải lên git-->
+  <link rel="canonical" href="https://hoangpt251.github.io/TranHoang-ThanhXuan-wedding/"> <!--cần sửa lại theo đúng thực tế tải lên git-->
 
   <!-- Open Graph: og: Sử dụng khi đăng bài trên các nền tảng Facebook, Zalo, Linkedin-->
   <meta property="og:locale" content="vi_VN">
   <meta property="og:type" content="article">
   <meta property="og:title" content="Trần Hoàng ❤️ Thanh Xuân">
-  <meta property="og:url" content="https://hoangpt251.github.io/my-wedding/"> <!--cũng cần sửa lại nếu upload lại folder-->
+  <meta property="og:url" content="https://hoangpt251.github.io/TranHoang-ThanhXuan-wedding/"> <!--cũng cần sửa lại nếu upload lại folder-->
   <meta property="og:site_name" content="Trần Hoàng ❤️ Thanh Xuân">
-  <meta property="og:image" content="https://hoangpt251.github.io/my-wedding/hoang-xuan.jpg">
-  <meta property="og:image:secure_url" content="https://hoangpt251.github.io/my-wedding/hoang-xuan.jpg">
+  <meta property="og:image" content="https://hoangpt251.github.io/TranHoang-ThanhXuan-wedding/hoang-xuan.jpg">
+  <meta property="og:image:secure_url" content="https://hoangpt251.github.io/TranHoang-ThanhXuan-wedding/hoang-xuan.jpg">
   <meta property="og:image:width" content="961">
   <meta property="og:image:height" content="1440">
   <meta property="og:description" content="Sự kiện cưới của Hoàng Xuân">
@@ -27,7 +27,7 @@
   <!-- For Twitter only -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Trần Hoàng ❤️ Thanh Xuân">
-  <meta name="twitter:image" content="https://hoangpt251.github.io/my-wedding/hoang-xuan.jpg">
+  <meta name="twitter:image" content="https://hoangpt251.github.io/TranHoang-ThanhXuan-wedding/hoang-xuan.jpg">
   <meta name="twitter:description" content="Sự kiện cưới của Hoàng Xuân">
   <meta name="twitter:image:alt" content="Hoàng Xuân">
 
@@ -52,7 +52,6 @@
   <!-- Main style -->
   <link rel="stylesheet" href="sources/css/mainStyle.css">
   <link rel="stylesheet" href="sources/css/responsive.css">
-  <!--link rel="stylesheet" href="sources/css/responsive-test.css"-->
 </head>
 
 <body>
@@ -68,10 +67,10 @@
         <span class="laptop-display">Trần Hoàng & Thanh Xuân</span>
         <span class="mobile-display">Trần Hoàng<br>Thanh Xuân</span>
       </h1>
-      <h4>Sẽ được bắt đầu sau:</h4>
+      <h4 data-i18n="hero.start">Sẽ được bắt đầu sau:</h4>
       <div class="simply-countdown"></div>
       <!--a href="#home" class="btn btn-lg mt-4 pulse-btn" onClick="enableScroll()">Mở thiệp cưới</a-->
-      <a href="#home" class="btn-hero pulse-btn" onClick="enableScroll()">Mở thiệp cưới</a>
+      <a href="#home" class="btn-hero pulse-btn" onClick="enableScroll()" data-i18n="hero.open">Mở thiệp cưới</a>
     </div>
   </main>
 
@@ -90,13 +89,25 @@
         </div>
         <div class="offcanvas-body">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="#home">Sự kiện</a>
-            <a class="nav-link" href="#info">Thiệp mời</a>
-            <a class="nav-link" href="#story">Câu chuyện</a>
-            <a class="nav-link" href="#gallery">Album ảnh</a>
-            <a class="nav-link" href="#video">Video ảnh</a>
-            <a class="nav-link" href="#message">Lời chúc</a>
-            <a class="nav-link" href="#gifts">Mừng cưới</a>
+            <a class="nav-link" href="#home" data-i18n="menu.event">Sự kiện</a>
+            <a class="nav-link" href="#info" data-i18n="menu.invite">Thiệp mời</a>
+            <a class="nav-link" href="#story" data-i18n="menu.story">Câu chuyện</a>
+            <a class="nav-link" href="#gallery" data-i18n="menu.gallery">Album ảnh</a>
+            <a class="nav-link" href="#video" data-i18n="menu.video">Video ảnh</a>
+            <a class="nav-link" href="#message" data-i18n="menu.message">Lời chúc</a>
+            <a class="nav-link" href="#gifts" data-i18n="menu.gifts">Mừng cưới</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" data-i18n="menu.lang">Ngôn ngữ</a>
+              <ul class="dropdown-menu" aria-labelledby="langDropdown">
+                <li><a class="dropdown-item lang-select" data-lang="vi" href="#">
+                    <img src="assets/picture/icon/vn.png" alt="VN" class="flag-icon"> Tiếng Việt</a>
+                </li>
+                <li><a class="dropdown-item lang-select" data-lang="en" href="#">
+                    <img src="assets/picture/icon/us.png" alt="US" class="flag-icon"> English</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -108,15 +119,15 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 text-center">
-          <h2 class="h2-event">Sự Kiện Cưới</h2>
+          <h2 class="h2-event" data-i18n="event.title">Sự Kiện Cưới</h2>
           <h3 class="invite-time">
-            <span class="laptop-display">Được tổ chức vào Chủ Nhật, ngày 02 tháng 11 năm 2025 <br>(Tức ngày 13 tháng 09 Âm lịch)</span>
-            <span class="mobile-display">Được tổ chức vào Chủ Nhật, ngày 02/11/2025 <br>(Tức ngày 13 tháng 09 Âm lịch)</span>
+            <span class="laptop-display" data-i18n="event.calendar.laptop">Được tổ chức vào Chủ Nhật, ngày 02 tháng 11 năm 2025 <br>(Tức ngày 13 tháng 09 Âm lịch)</span>
+            <span class="mobile-display" data-i18n="event.calendar.mobile">Được tổ chức vào Chủ Nhật, ngày 02/11/2025 <br>(Tức ngày 13 tháng 09 Âm lịch)</span>
           </h3>
           <p class="p-event">
-            <span class="laptop-display">Sự hiện diện của Quý Khách là niềm vinh dự của gia đình chúng tôi.<br>
+            <span class="laptop-display" data-i18n="event.desc.laptop">Sự hiện diện của Quý Khách là niềm vinh dự của gia đình chúng tôi.<br>
                   Rất hân hạnh được đón tiếp!</span>
-            <span class="mobile-display">Sự hiện diện của Quý Khách là niềm vinh dự của gia đình chúng tôi.
+            <span class="mobile-display" data-i18n="event.desc.mobile">Sự hiện diện của Quý Khách là niềm vinh dự của gia đình chúng tôi.
                   Rất hân hạnh được đón tiếp!</span>
           </p>        
         </div>
@@ -126,8 +137,9 @@
         <div class="col-lg-6">
           <div class="row">
             <div class="col-8 text-end">
-              <h3>💕 Chú Rể 💕 <br>
-                  <span class="title-name">Phạm Trần Hoàng</span></h3>
+              <h3><span data-i18n="event.groom">💕 Chú Rể 💕 </span><br>
+                  <span class="title-name">Phạm Trần Hoàng</span>
+              </h3>
               <p class="address">Gia Lộc - Chí Minh - Tp. Hải Phòng<br>
                 (Văn Tố - Tứ Kỳ - Hải Dương cũ)</p>
             </div>
@@ -149,8 +161,9 @@
               <img src="assets/picture/avatar/em.jpg" alt="Thanh Xuân" class="img-responsive rounded-circle">
             </div>
             <div class="col-8">
-              <h3>💕 Cô Dâu 💕<br>
-                  <span class="title-name">Trình Thị Xuân</span></h3>
+              <h3><span data-i18n="event.bride">💕 Cô Dâu 💕</span><br>
+                  <span class="title-name">Trình Thị Xuân</span>
+              </h3>
               <p class="address">Tràng Kênh - Cẩm Giang - Tp. Hải Phòng<br>
                 (Tt. Cẩm Giang - Cẩm Giàng - Hải Dương cũ)
               </p>
@@ -166,20 +179,20 @@
     <div class="cards-container">
       <!-- Mobile selectors -->
       <div class="card-selectors mobile-only">
-        <div class="card-selector active" data-target="card-trai">Thiệp cưới Nhà Trai</div>
-        <div class="card-selector" data-target="card-gai">Thiệp cưới Nhà Gái</div>
+        <div class="card-selector active" data-target="card-trai" data-i18n="card.groom">Thiệp cưới Nhà Trai</div>
+        <div class="card-selector" data-target="card-gai" data-i18n="card.bride">Thiệp cưới Nhà Gái</div>
       </div>
 
       <!-- Card Nhà Trai -->
       <div class="card-wrapper active" id="card-trai">
-        <div class="card-header desktop-only">Thiệp cưới Nhà Trai</div>
+        <div class="card-header desktop-only" data-i18n="card.groom">Thiệp cưới Nhà Trai</div>
         <div class="wedding-card">
           <div class="card-image">
             <img src="assets/picture/background/chu_hy.png" alt="Hoàng Xuân">
           </div>  
-          <h3>TRÂN TRỌNG KÍNH MỜI</h3>
-          <p class="guest-name">Quý Khách</p>
-          <p class="invite-text">Tới dự bữa cơm thân mật và <br>chung vui cùng gia đình chúng tôi !</p>
+          <h3 data-i18n="card.invite">TRÂN TRỌNG KÍNH MỜI</h3>
+          <p class="guest-name" data-i18n="card.guest">Quý Khách</p>
+          <p class="invite-text" data-i18n="card.invite-detail">Tới dự bữa cơm thân mật và <br>chung vui cùng gia đình chúng tôi !</p>
           <div class="names">
             <h2 class="couple-name">Phạm Trần Hoàng</h2>
               <div class="heart">
@@ -187,37 +200,47 @@
               </div>
             <h2 class="couple-name">Trình Thị Xuân</h2>
           </div>
-          <p class="invite-location"> Được tổ chức:</p>
+          <p class="invite-location" data-i18n="card.org"> Được tổ chức:</p>
           <div class="date-container">
-            <div class="date-top">CHỦ NHẬT</div>
+            <div class="date-top" data-i18n="card.date">CHỦ NHẬT</div>
             <div class="date-middle">
-              <div class="date-side left">VÀO LÚC:<br><span>11h00</span></div>
+              <div class="date-side left">
+                <span class="sub-label" data-i18n="card.at">VÀO LÚC:</span>
+                <span class="sub-value">11h00</span>
+              </div>
             <div class="date-center">02</div>
-              <div class="date-side right">THÁNG 11<br><span>2025</span></div>
+              <div class="date-side right">
+                <span class="sub-label" data-i18n="card.month">THÁNG 11</span>
+                <span class="sub-value">2025</span>
+              </div>
             </div>
           </div>
-            <p class="lunar-text">(Nhằm ngày 13 tháng 09 năm Ất Tỵ)</p>
-            <p><span class="position-text">Tại: </span>
-              <span class="local-text">Sân Khấu nhà Trai</span></p>
+            <p class="lunar-text" data-i18n="card.lunar">(Nhằm ngày 13 tháng 09 năm Ất Tỵ)</p>
+            <p><span class="position-text" data-i18n="card.local-label">Tại: </span>
+              <span class="local-text" data-i18n="card.local-groom">Sân Khấu nhà Trai</span></p>
             <p class="location-text">Gia Lộc - Chí Minh - Tp. Hải Phòng</p>
             <p class="location-text">(Văn Tố - Tứ Kỳ - Hải Dương cũ)</p>
 
           <!-- Thông tin hai bên -->
           <div class="family-info">
             <div class="family-block">
-              <h4>Nhà Trai</h4>
-              <p class="parents">Bố: <span class="parents-name">Phạm Văn Nhị</span></p>
-              <p class="parents">Mẹ: <span class="parents-name">Trần Thị Thúy</span></p>
+              <h4 data-i18n="card.groom-family">Nhà Trai</h4>
+              <p class="parents"><span data-i18n="card.father">Bố:</span>
+                <span class="parents-name">Phạm Văn Nhị</span></p>
+              <p class="parents"><span data-i18n="card.mother">Mẹ:</span>
+                <span class="parents-name">Trần Thị Thúy</span></p>
             </div>
             <div class="family-block">
-              <h4>Nhà Gái</h4>
-              <p class="parents">Bố: <span class="parents-name">Trình Văn Thiện</span></p>
-              <p class="parents">Mẹ: <span class="parents-name">Vũ Thị Son</span></p>
+              <h4 data-i18n="card.groom-family">Nhà Gái</h4>
+              <p class="parents"><span data-i18n="card.father">Bố:</span>
+                <span class="parents-name">Trình Văn Thiện</span></p>
+              <p class="parents"><span data-i18n="card.mother">Mẹ:</span>
+                <span class="parents-name">Vũ Thị Son</span></p>
             </div>
           </div>
           <!-- Thêm biểu tượng liên hệ (sđt và map) -->
           <div class="contact-info">
-            <span>Liên hệ:</span>
+            <span data-i18n="card.contact">Liên hệ:</span>
             <!-- Chỉ 1 link điện thoại, Android/iOS sẽ tự hiện lựa chọn Zalo/Phone -->
             <a href="tel:0346532656" class="contact-icon" title="Gọi cho chú rể">
               <i class="bi bi-telephone-fill"></i>
@@ -232,14 +255,14 @@
 
       <!-- Card Nhà Gái -->
       <div class="card-wrapper" id="card-gai">
-        <div class="card-header desktop-only">Thiệp cưới Nhà Gái</div>
+        <div class="card-header desktop-only" data-i18n="card.bride">Thiệp cưới Nhà Gái</div>
         <div class="wedding-card">
           <div class="card-image">
             <img src="assets/picture/background/chu_hy.png" alt="Hoàng Xuân">
           </div>  
-          <h3>TRÂN TRỌNG KÍNH MỜI</h3>
-          <p class="guest-name">Quý Khách</p>
-          <p class="invite-text">Tới dự bữa cơm thân mật và <br>chung vui cùng gia đình chúng tôi !</p>
+          <h3 data-i18n="card.invite">TRÂN TRỌNG KÍNH MỜI</h3>
+          <p class="guest-name" data-i18n="card.guest">Quý Khách</p>
+          <p class="invite-text" data-i18n="card.invite-detail">Tới dự bữa cơm thân mật và <br>chung vui cùng gia đình chúng tôi !</p>
           <div class="names">
             <h2 class="couple-name">Trình Thị Xuân</h2>
               <div class="heart">
@@ -247,37 +270,47 @@
               </div>
             <h2 class="couple-name">Phạm Trần Hoàng</h2>
           </div>
-          <p class="invite-location"> Được tổ chức:</p>
+          <p class="invite-location" data-i18n="card.org"> Được tổ chức:</p>
           <div class="date-container">
-            <div class="date-top">Chủ Nhật</div>
+            <div class="date-top" data-i18n="card.date">Chủ Nhật</div>
             <div class="date-middle">
-              <div class="date-side left">VÀO LÚC:<br><span>10h00</span></div>
-            <div class="date-center">02</div>
-              <div class="date-side right">THÁNG 11<br><span>2025</span></div>
+              <div class="date-side left">
+                <span class="sub-label" data-i18n="card.at">VÀO LÚC:</span>
+                <span class="sub-value">11h00</span>
+              </div>
+              <div class="date-center">02</div>
+              <div class="date-side right">
+                <span class="sub-label" data-i18n="card.month">THÁNG 11</span>
+                <span class="sub-value">2025</span>
+              </div>
             </div>
           </div>
-          <p class="lunar-text">(Nhằm ngày 13 tháng 09 năm Ất Tỵ)</p>
-          <p><span style="font-weight:bold; color:#000000; font-size:18px; font-family: Arial, sans-serif;">Tại: </span>
-            <span class="local-text">Sân Khấu nhà Gái</span></p>
+          <p class="lunar-text" data-i18n="card.lunar">(Nhằm ngày 13 tháng 09 năm Ất Tỵ)</p>
+          <p><span span class="position-text" data-i18n="card.local-label">Tại: </span>
+            <span class="local-text" data-i18n="card.local-bride">Sân Khấu nhà Gái</span></p>
           <p class="location-text">Tràng Kênh - Cẩm Giang - Tp. Hải Phòng</p>
           <p class="location-text">(Tt. Cẩm Giang - Cẩm Giàng - Hải Dương cũ)</p>
 
           <!-- Thông tin hai bên (ngược lại) -->
           <div class="family-info">
             <div class="family-block">
-              <h4>Nhà Gái</h4>
-              <p class="parents">Bố: <span class="parents-name">Trình Văn Thiện</span></p>
-              <p class="parents">Mẹ: <span class="parents-name">Vũ Thị Son</span></p>
+              <h4 data-i18n="card.bride-family">Nhà Gái</h4>
+              <p class="parents"><span data-i18n="card.father">Bố:</span>
+                <span class="parents-name">Trình Văn Thiện</span></p>
+              <p class="parents"><span data-i18n="card.mother">Mẹ:</span> 
+                <span class="parents-name">Vũ Thị Son</span></p>
             </div>
             <div class="family-block">
-              <h4>Nhà Trai</h4>
-              <p class="parents">Bố: <span class="parents-name">Phạm Văn Nhị</span></p>
-              <p class="parents">Mẹ: <span class="parents-name">Trần Thị Thúy</span></p>
+              <h4 data-i18n="card.groom-family">Nhà Trai</h4>
+              <p class="parents"><span data-i18n="card.father">Bố:</span> 
+                <span class="parents-name">Phạm Văn Nhị</span></p>
+              <p class="parents"><span data-i18n="card.mother">Mẹ:</span>
+                <span class="parents-name">Trần Thị Thúy</span></p>
             </div>
           </div>
           <!-- Thêm biểu tượng liên hệ (sđt và map) -->
           <div class="contact-info">
-            <span>Liên hệ:</span>
+            <span data-i18n="card.contact">Liên hệ:</span>
             <!-- Chỉ 1 link điện thoại, Android/iOS sẽ tự hiện lựa chọn Zalo/Phone -->
             <a href="tel:0372575188" class="contact-icon" title="Gọi cho cô dâu">
               <i class="bi bi-telephone-fill"></i>
@@ -297,7 +330,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 col-10 text-center">
-          <h2>Câu chuyện của chúng tôi</h2>
+          <h2 data-i18n="story.title">Câu chuyện của chúng tôi</h2>
           <p>Một phút xa nhau vạn phút nhớ,<br> Một lần gặp gỡ vạn lần mơ</p>
         </div>
       </div>
@@ -309,11 +342,11 @@
               <div class="timeline-image" style="background-image: url(assets/picture/avatar/anh_va_em1.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>Quen biết</h3>
+                  <h3 data-i18n="story.inLove">Quen biết</h3>
                   <span>== 23/10/2023 ==</span>
                 </div>
                 <div class="timeline-body">
-                  <p class="parag">Bắt đầu là những dòng tin nhắn kèm theo đó là những câu chuyện đã được chúng tôi gửi cho nhau. 
+                  <p class="parag" data-i18n="story.parag1">Bắt đầu là những dòng tin nhắn kèm theo đó là những câu chuyện đã được chúng tôi gửi cho nhau. 
                     Qua những câu chuyện, chúng tôi cũng hiểu về nhau một phần, và quyết định tìm hiểu về nhau nhiều hơn bằng những cuộc hẹn. 
                     Những câu chuyện thú vị đó cũng đã kéo chúng tôi lại gần với nhau hơn.
                   </p>
@@ -325,11 +358,11 @@
               <div class="timeline-image" style="background-image: url(assets/picture/avatar/anh_va_em2.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>Lần gặp gỡ đầu tiên</h3>
+                  <h3 data-i18n="story.firstMeet">Lần gặp gỡ đầu tiên</h3>
                   <span>== 19/01/2024== </span>
                 </div>
                 <div class="timeline-body">
-                  <p class="parag">Đó là một buổi tối mùa đông, trong không gian cổ điển của một quán cà phê với những cuốn sách được bày ngay ngắn trên giá. 
+                  <p class="parag" data-i18n="story.parag2">Đó là một buổi tối mùa đông, trong không gian cổ điển của một quán cà phê với những cuốn sách được bày ngay ngắn trên giá. 
                     Em mang cho tôi một chiếc bánh sinh nhật nhỏ xinh cùng những lời chúc tốt đẹp cho một tuổi mới. 
                     Một buổi tối thật lãng mạn và ý nghĩa!
                   </p>
@@ -341,11 +374,11 @@
               <div class="timeline-image" style="background-image: url(assets/picture/avatar/anh_va_em3.jpg);"></div>
               <div class="timeline-panel">
                 <div class="timeline-heading">
-                  <h3>Về chung một nhà</h3>
+                  <h3 data-i18n="story.engage">Về chung một nhà</h3>
                   <span>== 30/10/2025== </span>
                 </div>
                 <div class="timeline-body">
-                  <p class="parag">Trải qua một thời gian đủ để chúng tôi tìm hiểu về nhau thật kỹ lưỡng, chúng tôi đã quyết định tiến thêm một bước xa hơn, đó là xây dựng gia đình với nhau. 
+                  <p class="parag" data-i18n="story.parag3">Trải qua một thời gian đủ để chúng tôi tìm hiểu về nhau thật kỹ lưỡng, chúng tôi đã quyết định tiến thêm một bước xa hơn, đó là xây dựng gia đình với nhau. 
                   Chúng tôi cũng nhận được sự đồng thuận từ hai bên gia đình về một mối quan hệ bền chặt, gắn bó với nhau.
                   </p>
                 </div>
@@ -360,7 +393,7 @@
   <!-- THƯ VIỆN ẢNH -->
   <section id="gallery" class="gallery">
     <div class="container">
-      <h2>ALBUM ẢNH</h2>
+      <h2 data-i18n="gallery.title">ALBUM ẢNH</h2>
       <p>Theo cha theo mẹ đã đành, <br>Theo đôi, theo lứa ta thành phu thê.</p>
     </div>
     <div class="album-slide">
@@ -453,13 +486,13 @@
   <!-- VIDEO ẢNH CƯỚI -->
   <section id="video" class="video">
     <div class="video-container">
-      <h2>VIDEO ẢNH</h2>
+      <h2 data-i18n="video.title">VIDEO ẢNH</h2>
       <p>Yêu nhau chẳng quản lầm than,<br>Mấy sông cũng lội, mấy ngàn cũng qua.</p>
       <div class="video-wrapper">
         <iframe width="560" height="315" 
-          src="https://www.youtube.com/embed/QQPWZREMwxU?si=8OcdxTwH0kQ4O6QX" 
+          src="https://www.youtube.com/embed/f5YsGEIUcgA?si=zzEptgejkXYf8Axb" 
           title="YouTube video player" 
-          style="border: none;" 
+          style="border: none;"  
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
           referrerpolicy="strict-origin-when-cross-origin" 
           allowfullscreen>
@@ -472,48 +505,48 @@
   <section id="message" class="message-wish">
     <div class="overlay"> </div>
     <div class="container">
-        <h2>Gửi lời chúc</h2>
-        <p>Vợ Chồng cảm ơn những lời chúc tốt đẹp của Quý Khách</p>
+        <h2 data-i18n="message.title">Gửi lời chúc</h2>
+        <p data-i18n="message.desc">Vợ Chồng cảm ơn những lời chúc tốt đẹp của Quý Khách</p>
         <div class="list_message"></div>
         <div class="message-box blur-bg">
-            <h3 class="form-title">Gửi lời chúc</h3>
+            <h3 class="form-title" data-i18n="message.formTitle">Gửi lời chúc</h3>
             <form action="#" id="wishForm">
                 <!-- Các trường để nhập thông tin -->
                 <div class="input-group">
                     <!--1. Nhập tên của bạn -->
-                    <label for="name">Tên của bạn *</label>
+                    <label for="name" data-i18n="message.name">Tên của bạn *</label>
                     <input class="input form-style blur-bg" id="name" name="entry.350023970" type="text" value="" required="">
                     <!--2. Nhập tổ chức, đơn vị công tác -->
-                    <label for="organization">Thuộc cơ quan/đơn vị</label>
+                    <label for="organization" data-i18n="message.org">Thuộc cơ quan/đơn vị</label>
                     <input class="input form-style blur-bg" id="organization" name="entry.1642735953" type="text" value="">
                 </div>
                 <!-- 3. Mối quan hệ (Dropdown) -->
                 <div class="input-group">
-                    <label for="relation">Mối quan hệ với dâu/rể *</label> 
+                    <label for="relation" data-i18n="message.relation">Mối quan hệ với dâu/rể *</label> 
                     <select class="input form-style blur-bg transition" id="relation" name="entry.695324625" required=""
                             onfocus="this.style.borderColor='#1a73e8'" 
                             onblur="this.style.borderColor='#dadce0'">
-                        <option value="" disabled selected>-- Hãy chọn một --</option>
-                        <option value="Cô, dì, chú, bác">Cô, dì, chú, bác</option>
-                        <option value="Anh, em">Anh, em</option>
-                        <option value="Bạn chú rể">Bạn chú rể</option>
-                        <option value="Bạn cô dâu">Bạn cô dâu</option>
-                        <option value="Bạn của dâu, rể">Bạn của dâu, rể</option>
-                        <option value="Khác">Khác</option>
+                        <option value="" disabled selected data-i18n="message.placeholder">-- Hãy chọn một --</option>
+                        <option value="Cô, dì, chú, bác" data-i18n="message.option.relatives">Cô, dì, chú, bác</option>
+                        <option value="Anh, em" data-i18n="message.option.siblings">Anh, em</option>
+                        <option value="Bạn chú rể" data-i18n="message.option.friendGroom">Bạn chú rể</option>
+                        <option value="Bạn cô dâu" data-i18n="message.option.friendBride">Bạn cô dâu</option>
+                        <option value="Bạn của dâu, rể" data-i18n="message.option.friendBoth">Bạn của dâu, rể</option>
+                        <option value="Khác" data-i18n="message.option.other">Khác</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <!--4. Nhập lời chúc-->
-                    <label for="congrat">Nhập lời chúc *</label>
+                    <label for="congrat" data-i18n="message.wish">Nhập lời chúc *</label>
                     <!--input style="border:1px solid white; color: black;" type="text" id="message" name="entry.77831247" class="input blur-bg" required=""-->
                     <textarea id="congrat" name="entry.77831247" rows="3" 
                               class="input blur-bg" required=""></textarea>
                 </div>
                 <!-- Nút bấm gửi lời chúc -->
                 <div class="button-group">
-                  <button type="submit" class="btn btn-primary">Gửi lời chúc</button>
-                  <a href="https://docs.google.com/spreadsheets/d/1_MWJPZ-6AjnId-YTGcheopYJLCcqZsKEdszhW4tKMuk/edit?usp=sharing"
-                    target="_blank" rel="noopener noreferrer" class="btn btn-primary">Xem lời chúc</a>
+                  <button type="submit" class="btn btn-primary" data-i18n="message.send">Gửi lời chúc</button>
+                  <!--a href="https://docs.google.com/spreadsheets/d/1_MWJPZ-6AjnId-YTGcheopYJLCcqZsKEdszhW4tKMuk/edit?usp=sharing"
+                    target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="message.view">Xem lời chúc</a-->
                 </div>
             </form>
             <p style="margin-top:10px;" id="status"></p>
@@ -523,13 +556,13 @@
 
   <!-- MỪNG CƯỚI ONLINE -->
   <section id="gifts" class="gifts">
-    <h2>MỪNG CƯỚI ONLINE</h2>
-    <p>Vợ chồng chân thành cảm ơn tình cảm của Quý Khách 💝</p>
+    <h2 data-i18n="gifts.title">MỪNG CƯỚI ONLINE</h2>
+    <p data-i18n="gifts.desc">Vợ chồng chân thành cảm ơn tình cảm của Quý Khách 💝</p>
     <div class="wedding-gifts">
       <div class="overlay">
         <div class="gift-box-bottom">
           <img src="assets/picture/icon/gift-box.gif" alt="Hộp quà" class="gift-icon" onclick="showGiftModal()">
-          <p class="gift-message">💖 Chúc Mừng Hạnh Phúc 💖</p>
+          <p class="gift-message" data-i18n="gifts.congrat">💖 Chúc Mừng Hạnh Phúc 💖</p>
         </div>
       </div>
     </div>
@@ -537,35 +570,35 @@
     <div class="modal fade" id="giftModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content p-4 text-center">
-          <h4 class="fw-bold mb-3">Mừng cưới dâu, rể</h4>
-          <p class="p1">♥ Vợ chồng chân thành cảm ơn tình cảm của Quý Khách ♥</p>
+          <h4 class="fw-bold mb-3" data-i18n="gifts.send.title">Mừng cưới dâu, rể</h4>
+          <p class="p1" data-i18n="gifts.thanks">♥ Vợ chồng chân thành cảm ơn tình cảm của Quý Khách ♥</p>
           <!-- Wrapper để giữ hai card nằm ngang, cách đều -->
           <div class="qr-row-wrapper">
             <!-- Chú Rể -->
             <div>
               <div class="qr-card">
-                <h5 class="fw-bold">MỪNG CƯỚI CHÚ RỂ</h5>
+                <h5 class="fw-bold" data-i18n="gifts.send.groom">MỪNG CƯỚI CHÚ RỂ</h5>
                 <img src="assets/picture/qrCode/hoangpt.jpg" alt="QR Chú Rể"
                   onclick="showModalImage('assets/picture/qrCode/hoangpt.jpg')">
                 <div class="qr-buttons">
                   <button class="btn btn-outline-primary btn-sm"
-                    onclick="downloadImage('assets/picture/qrCode/hoangpt.jpg')">Tải ảnh QR</button>
+                    onclick="downloadImage('assets/picture/qrCode/hoangpt.jpg')" data-i18n="gifts.download">Tải ảnh QR</button>
                   <button class="btn btn-outline-success btn-sm" onclick="copySTK(this)"
-                    data-stk="0904075097">Copy STK</button>
+                    data-stk="0904075097" data-i18n="gifts.account">Copy STK</button>
                 </div>
               </div>
             </div>
             <!-- Cô Dâu -->
             <div>
               <div class="qr-card">
-                <h5 class="fw-bold">MỪNG CƯỚI CÔ DÂU</h5>
+                <h5 class="fw-bold" data-i18n="gifts.send.bride">MỪNG CƯỚI CÔ DÂU</h5>
                 <img src="assets/picture/qrCode/xuantt.jpg" alt="QR Cô Dâu"
                   onclick="showModalImage('assets/picture/qrCode/xuantt.jpg')">
                 <div class="qr-buttons">
                   <button class="btn btn-outline-primary btn-sm"
-                    onclick="downloadImage('assets/picture/qrCode/xuantt.jpg')">Tải ảnh QR</button>
+                    onclick="downloadImage('assets/picture/qrCode/xuantt.jpg')" data-i18n="gifts.download">Tải ảnh QR</button>
                   <button class="btn btn-outline-success btn-sm" onclick="copySTK(this)"
-                    data-stk="9500101144009">Copy STK</button>
+                    data-stk="9500101144009" data-i18n="gifts.account">Copy STK</button>
                 </div>
               </div>
             </div>
@@ -589,7 +622,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <p class="title">💖💖💖 RẤT HÂN HẠNH ĐƯỢC ĐÓN TIẾP 💖💖💖 <br>
+          <p class="title" data-i18n="footer.text">💖💖💖 RẤT HÂN HẠNH ĐƯỢC ĐÓN TIẾP 💖💖💖 <br>
             Phát triển: Phạm Trần Hoàng; Cố vấn: Trình Thị Xuân
           </p>
         </div>
@@ -613,6 +646,7 @@
   <script src="sources/js/swiper-bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="sources/js/media.js"></script>
+  <script src="sources/js/lang.js"></script>
   
   <!-- Countdown-->
   <script>
@@ -620,7 +654,7 @@
       year: 2025, // required
       month: 11, // required
       day: 2, // required
-      hours: 10, // Default is 0 [0-23] integer
+      hours: 11, // Default is 0 [0-23] integer
       words: { //words displayed into the countdown
         days: { singular: 'Ngày', plural: 'Ngày' },
         hours: { singular: 'Giờ', plural: 'Giờ' },
@@ -691,7 +725,7 @@
     // if (!localStorage.getItem('opened')) {
     //   disableScroll();
     // }
-    //disableScroll();  //cần phải kích hoạt lại --> Cấm xóa
+    disableScroll();  //cần phải kích hoạt lại --> Cấm xóa
   </script>
 
   <script>
