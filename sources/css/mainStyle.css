@@ -1098,8 +1098,31 @@ p {
   margin-top: 0px;
 }
 #giftModal .modal-dialog {
-  max-width: 570px; /* tùy chỉnh độ rộng khung ngoài cùng */
+  max-width: 576px; /* tùy chỉnh độ rộng khung ngoài cùng */
 }
+/* Nút đóng modal */
+#giftModal .btn-close {
+  position: relative;          /* không cố định tuyệt đối, để tự co theo modal */
+  align-self: flex-end;        /* đẩy sang phải nếu modal dùng flex */
+  margin-bottom: 0.5rem;       /* cách nội dung bên dưới */
+  opacity: 0.5;
+  transition: all 0.25s ease;  /* hiệu ứng mượt khi hover hoặc tap */
+  z-index: 1;
+  cursor: pointer;
+}
+/* Hiệu ứng khi hover hoặc khi người dùng chạm (tap) trên thiết bị cảm ứng */
+#giftModal .btn-close:hover {
+  opacity: 1;
+  transform: scale(1.15) rotate(10deg);
+}
+/* Đảm bảo modal nội dung căn chỉnh đẹp */
+#giftModal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
 /* === KẾT THÚC STYLE PHẦN MỪNG CƯỚI === */
 
 /* === 9. PHẦN FOOTER === */
