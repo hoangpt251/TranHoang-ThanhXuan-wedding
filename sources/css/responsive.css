@@ -24,6 +24,7 @@
     transform: translateY(-20px);
   }
   h4 {transform: translateY(-15px);}
+  .story, .gallery, .video, .message-wish, .gifts {padding-top: 3.5rem}
   .wedding-banner-img {margin-top: 15px;}
   .simply-countdown > .simply-section {
       width: 45px;
@@ -137,7 +138,6 @@
         transform: translateY(-15px);
     }
     .home .address { font-size: 1.1rem; }
-    /*==================================================*/
 
     .wedding-page { background-position: 63% center; }
     .card-wrapper {
@@ -221,6 +221,11 @@
     }
     .heart-inner { transform: translateY(-10px); }
 
+    .family-block .parents-name {
+        font-family: 'West-Condensed', fantasy;
+        font-size: 16px;
+    }
+
     .story h3 {font-size: 1.5rem; }
     .story span {font-size: 0.75rem; }
     .story .parag {font-size: 0.9rem;}
@@ -242,10 +247,18 @@
     .video-wrapper { margin-top: 150px; }
 
     footer .title { font-size: 0.8rem; }
+
+    .audio-icon-wrapper {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 2.8rem;
+        bottom: 1rem;
+        right: 1rem;
+    }
 }
 
 /* <= 375px : Mobile rất nhỏ (tuỳ chọn thêm) */
-@media (max-width: 375px) {
+@media (max-width: 414px) {
     h1 {font-size: 4.5rem;}
     .wedding-banner-img {
         width: 65%; /* hoặc giá trị bạn thấy phù hợp như 300px */
@@ -259,8 +272,11 @@
         margin: 5px;
     }
     .simply-countdown > .simply-section .simply-amount {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         margin-bottom: -5px;
+    }
+    .simply-countdown > .simply-section .simply-word {
+        font-size: 0.8rem;
     }
     .invite-time .mobile-display { font-size: 15px; }
     .p-event .mobile-display { font-size: 13px; }
@@ -272,7 +288,6 @@
     .home .heart {
         transform: translateX(-50%) translateY(115px); /* dịch lên cao hơn */
     }
-    /*Chỉnh lại phần wedding card*/
 
     .wedding-card {
         position: relative;
@@ -314,7 +329,6 @@
         font-size: 14px
     }
     .family-block .parents{font-size: 13px; margin-bottom: -5px;}
-    .family-block .parents-name {font-size: 20px;}
     .contact-info {
         margin-top: 5px; 
         padding-top: 5px;
@@ -353,4 +367,7 @@
         white-space: nowrap;
     }
     footer .title {font-size: 0.7rem;}
+}
+@media (max-width: 375px) {
+
 }
