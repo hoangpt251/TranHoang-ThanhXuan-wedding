@@ -246,6 +246,16 @@
 
     .video-wrapper { margin-top: 150px; }
 
+    #giftModal .btn-close {
+        position: absolute;
+        top: 0.3rem;      /* đẩy lên trên nhẹ */
+        right: 0.3rem;    /* đẩy ra ngoài biên phải nhẹ */
+        z-index: 2;
+        cursor: pointer;
+        opacity: 0.75;
+        scale: 0.8;
+    }
+
     footer .title { font-size: 0.8rem; }
 
     .audio-icon-wrapper {
@@ -359,7 +369,7 @@
     .form-style {font-size: 15px;}
     .button-group {gap: 15px; margin-top: 8px;}
     .btn {
-        padding: 10px 15px;
+        /* padding: 10px 15px; */
         margin-top: 8px;
     }
     .gift-message {
