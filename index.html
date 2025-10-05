@@ -569,7 +569,13 @@
     <!-- Modal hiển thị QR -->
     <div class="modal fade" id="giftModal" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content p-4 text-center">
+        <div class="modal-content p-4 text-center position-relative">
+          <!-- Nút X để đóng modal-->
+            <button type="button"
+              class="btn-close ms-auto"
+              data-bs-dismiss="modal"
+              aria-label="Close">
+            </button>
           <h4 class="fw-bold mb-3" data-i18n="gifts.send.title">Mừng cưới dâu, rể</h4>
           <p class="p1" data-i18n="gifts.thanks">♥ Vợ chồng chân thành cảm ơn tình cảm của Quý Khách ♥</p>
           <!-- Wrapper để giữ hai card nằm ngang, cách đều -->
